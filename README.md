@@ -1,19 +1,51 @@
-# Diabetes_Dataset
-This dataset is originally from the National Institute of Diabetes and Digestive and Kidney Diseases. The objective is to predict based on diagnostic measurements whether a patient has diabetes.
+# 🩺 Diabetes Classification using Machine Learning
 
+This project applies machine learning techniques to predict the likelihood of diabetes in patients based on clinical features, using the Pima Indians Diabetes dataset.
 
-Content
+## 🚀 Goal
 
-Several constraints were placed on the selection of these instances from a larger database. In particular, all patients here are females at least 21 years old of Pima Indian heritage.
+To compare several classification algorithms and evaluate their performance, while also analyzing the importance of features and the effect of data cleaning.
 
-Pregnancies: Number of times pregnant
-Glucose: Plasma glucose concentration a 2 hours in an oral glucose tolerance test
-BloodPressure: Diastolic blood pressure (mm Hg)
-SkinThickness: Triceps skin fold thickness (mm)
-Insulin: 2-Hour serum insulin (mu U/ml)
-BMI: Body mass index (weight in kg/(height in m)^2)
-DiabetesPedigreeFunction: Diabetes pedigree function
-Age: Age (years)
-Outcome: Class variable (0 or 1)
+## 🧪 Dataset
 
-https://www.kaggle.com/datasets/mathchi/diabetes-data-set
+- Source: Pima Indians Diabetes dataset (from Kaggle / UCI)
+- Features include: Pregnancies, Glucose, BMI, Age, Insulin, etc.
+
+## 📊 Workflow
+
+1. **Data Cleaning & EDA**
+   - Removed/imputed zero values for Glucose, BloodPressure, etc.
+   - Visualized distributions and class imbalance
+
+2. **Modeling**
+   - Logistic Regression
+   - Decision Tree
+   - Random Forest
+   - XGBoost
+
+3. **Evaluation Metrics**
+   - Accuracy
+   - Precision / Recall
+   - AUC-ROC
+   - Confusion Matrix
+
+4. **Feature Importance**
+   - Used built-in importance in tree-based models
+
+## 🧠 Key Learnings
+
+- XGBoost showed best performance with AUC ≈ 0.84
+- Feature engineering & cleaning significantly impacted model accuracy
+- Early-stage disease detection benefits from interpretable models
+
+## 📁 File Overview
+
+- `notebooks/diabetes_analysis.ipynb` – Main notebook with full pipeline
+- `results/` – Visualizations (feature importance, confusion matrices)
+- `requirements.txt` – Libraries used (pandas, sklearn, xgboost, etc.)
+
+## 📌 To Run
+
+```bash
+pip install -r requirements.txt
+jupyter notebook notebooks/diabetes_analysis.ipynb
